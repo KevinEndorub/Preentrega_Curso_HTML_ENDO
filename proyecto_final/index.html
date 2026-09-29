@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style-form.css">
+    <link rel="stylesheet" href="style-cartas.css">
+    
+</head>
+<body>
+
+
+
+
+
+    <div class="page-container">
+        
+        <!-- Checkbox de Modo Oscuro al inicio para que afecte a toda la pagina-->
+        <input type="checkbox" id="modo-nocturno">
+
+        <header class="header-fijo">
+            <!-- Checkbox y Label del Menú  -->
+            <input type="checkbox" id="menu-check">
+            <label for="menu-check" class="menu-desplegable">☰</label>
+            
+            <!-- Logo -->
+            <div class="logo"> 
+                <img src="/proyecto_final/assets/logo.png" alt="Logo" class="imagen-logo">
+            </div>
+            
+            <!-- Menú de navegación -->
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+            <!-- Formulario de usuario -->   
+                    <li>
+                        <input type="checkbox" id="toggle-form">
+                        <label for="toggle-form" class="btn-abrir">Iniciar Sesión</label>
+
+                        <div class="modal-overlay">
+                            <form class="grid-container" action="https://formspree.io/f/xnpnvgbp" method="post" >
+
+                                <label for="toggle-form" class="btn-cerrar">X</label>
+                                <div class="ancho-total titulo">
+                                    Inicio de Sesión
+                                </div>
+
+                                <div class="ancho-total">
+                                    <label for="email">Correo electrónico</label>
+                                    <input type="email" name="email" id="email" required placeholder="ElBarto@gmail.com">
+                                </div>
+
+
+                                <div class="ancho-total">
+                                    <label for="contraseña">Contraseña</label>
+                                    <input type="password" name="contraseña"  id="contraseña" required placeholder="*******">
+                                </div>
+
+
+                                <div class="ancho-total">
+                                    <label for="servidores">Servidor</label>
+                                    <select id="servidores" name="servidor" required>
+                                        <option value="" disabled selected>Seleccione un servidor</option>
+                                        <option value="america">América</option>
+                                        <option value="asia">Asia</option>
+                                        <option value="china">China</option>
+                                        <option value="europa">Europa</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="ancho-total">
+                                    <button type="submit" id="enviar">Ingresar</button>
+                                </div>
+
+                                <!-- Fila 6: Botones divididos en 2 columnas -->
+                                <div class="medio-ancho">
+                                    <button type="button" class="btn-secundario">Gmail</button>
+                                </div>
+
+                                <div class="medio-ancho">
+                                    <a class="btn-secundario" href="placeholder.html">Registrarse</a>
+
+                                </div>
+
+                            </form>
+                </div>
+                </li>
+                </ul>
+            </nav>
+        </header>
+        </main>
+    </div>
+
+    <!-- Fondo banner  -->
+
+    <div class="fondo-inicio">
+        <img src="/proyecto_final/assets/wallpaper-crisos.png">
+    </div>
+
+
+ <div class="espacio">
+    <h1>Amphoreus</h1>
+    <h2>Herederos de crisos</h2>
+</div>
+
+
+
+    <!-- Cartas -->
+    
+<div class="seccion-cartas ">
+
+    <div class="contenedor-carta">
+        <!--  Imagen principal -->
+        <div class="contenedor-imagen-personaje">
+            <img src="/proyecto_final/assets/cyrene_card.png" alt="Cyrene" class="imagen-personaje">
+        </div>
+        
+        <!--  Detalles -->
+        <div class="detalles-personaje">
+            
+            <div class="personaje-entrada">
+                <div class="caja-icono">
+                    <img src="/proyecto_final/assets/Remembrance-logo.webp" alt="Vía" class="imagen-personaje-entrada">
+                </div>    
+                <div class="nombre-personaje">
+                    <h3>Cyrene</h3>
+                </div>   
+                <div class="caja-icono">
+                    <img src="/proyecto_final/assets/Ice.webp" alt="Elemento" class="imagen-personaje-entrada">
+                </div>   
+            </div>
+            
+            <!-- Grilla interna -->        
+            <div class="grilla-contenido">
+                
+                <!-- Video Promo -->
+                <div class="caja-video">
+                    <iframe class="video-promo"
+                        src="https://www.youtube.com/embed/CRAuK8T6Xis?si=SiS8y5JDZUHIDRR6" 
+                        title="YouTube video player" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>  
+
+                <!-- Frase  -->
+                <div class="caja caja-quote">
+                    “El mundo fue amable conmigo, así que yo también crecí siendo amable”
+                    </p>
+                </div>   
+
+                <!-- Descripcion  -->
+                <div class="caja caja-descripcion"> <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil placeat minus at autem commodi, dolor voluptas iusto, veniam deserunt repudiandae quasi. Vitae, repellat? Nam, eveniet molestiae nemo mollitia unde harum, nobis beatae. Libero saepe qui quod laborum 
+                    a nostrum ut vel suscipit! debo la traduccion de las descripciones.</p>
+                </div>   
+                
+                <!-- Comentarios -->
+                <div class="caja-comentarios">
+                    <div class="comentario-item">
+                        <span class="usuario-comentario">@godlycav2464</span>
+                        <p class="texto-comentario">her ult better be  called ""See you tomorrow"" becouse it take a full day to charge</p>
+                    </div>
+                    <div class="comentario-item">
+                        <span class="usuario-comentario">@Bluewateringme</span>
+                        <p class="texto-comentario">Cyrene coping mechanism is self insert
+                            Honestly relatable</p>
+                    </div>
+                    <div class="comentario-item">
+                        <span class="usuario-comentario">@ImmortalSnail_A</span>
+                        <p class="texto-comentario">In trailers and videos
+                        Caelus: Happy
+                        Stelle: Suffering seeing everything in flames</p>
+                    </div>
+                    <div class="comentario-item">
+                        <span class="usuario-comentario">@moonpie_m</span>
+                        <p class="texto-comentario">girl is a self insert writer 😂 she wasn't even present in those 
+                        parts but she wrote herself into that anyways</p>
+                    </div>
+                    <div class="comentario-item">
+                        <span class="usuario-comentario">@Yo</span>
+                        <p class="texto-comentario">No te aguanto</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--- Aca va el espacio entre cartas -->
+ <div class="espacio">
+
+</div>
+    
+    <div class="contenedor-carta">
+        <!--  Imagen principal -->
+        <div class="contenedor-imagen-personaje">
+            <img src="/proyecto_final/assets/cyrene_card.png" alt="Cyrene" class="imagen-personaje">
+        </div>
+        
+        <!--  Detalles -->
+        <div class="detalles-personaje">
+            
+            <div class="personaje-entrada">
+                <div class="caja-icono">
+                    <img src="/proyecto_final/assets/Remembrance-logo.webp" alt="Vía" class="imagen-personaje-entrada">
+                </div>    
+                <div class="nombre-personaje">
+                    Cyrene
+                </div>   
+                <div class="caja-icono">
+                    <img src="/proyecto_final/assets/Ice.webp" alt="Elemento" class="imagen-personaje-entrada">
+                </div>   
+            </div>
+            
+            <!-- Grilla interna -->        
+            <div class="grilla-contenido">
+                
+                <!-- Video Promo -->
+                <div class="caja-video">
+                    <iframe class="video-promo"
+                        src="https://www.youtube.com/embed/CRAuK8T6Xis?si=SiS8y5JDZUHIDRR6" 
+                        title="YouTube video player" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>  
+
+                <!-- Frase  -->
+                <div class="caja caja-quote">
+                    “El mundo fue amable conmigo, así que yo también crecí siendo amable”
+                </div>   
+
+                <!-- Descripcion  -->
+                <div class="caja caja-descripcion">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil placeat minus at autem commodi, dolor voluptas iusto, veniam deserunt repudiandae quasi. Vitae, repellat? Nam, eveniet molestiae nemo mollitia unde harum, nobis beatae. Libero saepe qui quod laborum 
+                    a nostrum ut vel suscipit! debo la traduccion de las descripciones.
+                </div>   
+                
+                <!-- Comentarios -->
+                <div class="caja-comentarios">
+                    <div class="comentario-item">
+                        <span class="usuario-comentario">@godlycav2464</span>
+                        <p class="texto-comentario">her ult better be  called ""See you tomorrow"" becouse it take a full day to charge</p>
+                    </div>
+                    <div class="comentario-item">
+                        <span class="usuario-comentario">@Bluewateringme</span>
+                        <p class="texto-comentario">Cyrene coping mechanism is self insert
+                            Honestly relatable</p>
+                    </div>
+                    <div class="comentario-item">
+                        <span class="usuario-comentario">@ImmortalSnail_A</span>
+                        <p class="texto-comentario">In trailers and videos
+                        Caelus: Happy
+                        Stelle: Suffering seeing everything in flames</p>
+                    </div>
+                    <div class="comentario-item">
+                        <span class="usuario-comentario">@moonpie_m</span>
+                        <p class="texto-comentario">girl is a self insert writer 😂 she wasn't even present in those 
+                        parts but she wrote herself into that anyways</p>
+                    </div>
+                    <div class="comentario-item">
+                        <span class="usuario-comentario">@Yo</span>
+                        <p class="texto-comentario">No te aguanto</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<footer class="footer-sitio">
+    <div class="barray-copyright">
+        <div class="contenido-footer">
+
+                <div class="columna-footer">
+                    <h3 class="logo-footer">Amphoreus<span> Wiki</span></h3>
+                    <p class="descripcion-footer">
+                        Presentacion de personajes
+                    </p>
+                </div>
+
+
+                <div class="columna-footer">
+                    <h4>Comunidad</h4>
+                    <div class="redes-sociales">
+                        <a href="..\proyecto_final\placeholder.html" aria-label="Discord">Discord</a>
+                        <a href="..\proyecto_final\placeholder.html" aria-label="Twitter">Twitter</a>
+                        <a href="..\proyecto_final\placeholder.html" aria-label="YouTube">YouTube</a>
+                    </div>
+                </div>
+            </div>
+
+
+    <div class="barray-copyright">
+        <p class="disclaimer">
+            Esta web es un proyecto no oficial didactico. Todos los activos, imágenes y contenido del juego son propiedad intelectual de sus respectivos dueños.
+        </p>
+    </div>
+
+</footer>
+
+</body>
+</html>
+</html>
