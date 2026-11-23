@@ -1,0 +1,128 @@
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.carta-producto {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #1e1b4b 0%, #0f172a 100%);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 14px;
+    overflow: hidden;
+    color: #f8fafc;
+    box-shadow: 0 10px 24px rgba(2, 6, 23, 0.45);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carta-producto:hover {
+    transform: translateY(-4px);
+    border-color: #38bdf8;
+    box-shadow: 0 16px 32px rgba(2, 6, 23, 0.6);
+}
+
+.carta-img-wrap {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    background: rgba(15, 23, 42, 0.8);
+    overflow: hidden;
+}
+
+.carta-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.badge-producto {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #ffffff;
+    z-index: 2;
+}
+
+.badge-producto.oferta {
+    background: #e60012;
+}
+
+.badge-producto.sin-stock {
+    background: #475569;
+}
+
+.carta-cuerpo {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.carta-tipo {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #38bdf8;
+}
+
+.carta-titulo {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.carta-precios {
+    margin-top: auto;
+    padding-top: 6px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.precio-tachado {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    text-decoration: line-through;
+}
+
+.precio-final {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #f8fafc;
+}
+
+.btn-agregar {
+    margin-top: 8px;
+    width: 100%;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #e60012;
+    color: #ffffff;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-agregar:hover:not(:disabled) {
+    background: #c80010;
+}
+
+.btn-agregar:disabled {
+    background: #334155;
+    color: #94a3b8;
+    cursor: not-allowed;
+}
+
+.carta-producto.sin-stock .carta-img-wrap img {
+    opacity: 0.55;
+    filter: grayscale(40%);
+}

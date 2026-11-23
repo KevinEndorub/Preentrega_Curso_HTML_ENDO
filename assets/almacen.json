@@ -1,0 +1,33 @@
+[
+  {
+    "id": "Cyrene0",
+    "personaje": "Cyrene",
+    "tipo": "Pack",
+    "precioNormal": 32000,
+    "descuento": 25,
+    "enDescuento": true,
+    "stock": true,
+    "imagen": "Merch0.jpg"
+  },
+  
+  {
+    "id": "Cyrene1",
+    "personaje": "Cyrene",
+    "tipo": "Pack",
+    "precioNormal": 3300,
+    "descuento": 25,
+    "enDescuento": true,
+    "stock": true,
+    "imagen": "Merch1.jpg"
+  },
+   {
+    "id": "Cyrene2",
+    "personaje": "Cyrene",
+    "tipo": "Peluche",
+    "precioNormal": 323,
+    "descuento": 25,
+    "enDescuento": true,
+    "stock": false,
+    "imagen": "Merch2.jpg"
+  }
+]

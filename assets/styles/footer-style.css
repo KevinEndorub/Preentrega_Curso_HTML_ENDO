@@ -1,0 +1,108 @@
+.footer-sitio {
+    width: 100%;
+    margin-top: 48px;
+    background: linear-gradient(180deg, #1e1b4b 0%, #0f172a 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 -8px 24px rgba(15, 23, 42, 0.35);
+    color: #f1f8ff;
+}
+
+.contenido-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 36px 2.5% 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.columna-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 420px;
+}
+
+.logo-footer {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.3px;
+}
+
+.descripcion-footer {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #cbd5e1;
+}
+
+.columna-footer h4 {
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #93c5fd;
+}
+
+.redes-sociales {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.redes-sociales a {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: rgba(47, 64, 160, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #f8fafc;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.redes-sociales a:hover {
+    background: rgba(47, 64, 160, 0.92);
+    border-color: #e60012;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.barray-copyright {
+    padding: 16px 2.5%;
+    background: rgba(2, 6, 23, 0.55);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+}
+
+.disclaimer {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    color: #94a3b8;
+}
+
+/* --- Adaptación para celulares --- */
+@media (max-width: 768px) {
+    .contenido-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 28px 16px 22px;
+        gap: 24px;
+    }
+
+    .redes-sociales a {
+        padding: 8px 12px;
+        font-size: 0.82rem;
+    }
+
+    .barray-copyright {
+        padding: 14px 16px;
+    }
+}

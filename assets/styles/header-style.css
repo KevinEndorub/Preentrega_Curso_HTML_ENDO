@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #acaabe 0%, #0f172a 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.45);
+    color: rgb(241, 248, 255);
+    z-index: 1000;
+    transition: background 0.25s ease;
+}
+
+.header-top {
+    min-height: 76px;
+    height: 12vh;
+    padding: 0 2.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    transition: height 0.3s ease, min-height 0.3s ease;
+}
+
+/* --- Logo --- */
+.logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 150px;
+    height: 64px;
+    object-fit: contain;
+    display: block;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* --- Barra del buscador --- */
+.buscador {
+    width: 45%;
+    max-width: 520px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #ffffff;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    padding: 0 15px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buscador span {
+    color: #1e1b4b;
+    font-size: 1.05rem;
+    line-height: 1;
+}
+
+.buscador:focus-within {
+    border-color: #a0666b;
+    box-shadow: 0 0 0 3px rgba(230, 0, 18, 0.22);
+}
+
+.buscador input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #0f172a;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.buscador input::placeholder {
+    color: #64748b;
+}
+
+/* --- Accesos (Cuenta y Carrito) --- */
+.accesos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.accesos button {
+    width: auto;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(47, 64, 160, 0.6);
+    color: #7a6363;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.accesos button:hover {
+    background: rgba(47, 64, 160, 0.95);
+    border-color: #38bdf8;
+}
+
+.accesos .btn-carrito {
+    background-color: #2d91aa;
+    border-color: transparent;
+}
+
+.accesos .btn-carrito:hover {
+    background-color: #257a90;
+    border-color: transparent;
+}
+
+/* --- Navegación inferior --- */
+.nav {
+    min-height: 44px;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    background: rgba(15, 23, 42, 0.55);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.25s ease;
+}
+
+.nav a {
+    position: relative;
+    padding: 8px 4px;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav a:hover,
+.nav a.activo {
+    color: #ffffff;
+    border-bottom-color: #6d3e42;
+}
+
+/* --- Botón menú (oculto de primera) --- */
+.boton-menu {
+    display: none;
+    width: auto;
+    padding: 7px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background-color: #a6aa9b;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 800;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* --- Estado compacto no funciona --- */
+.header.compacto .header-top {
+    min-height: 58px;
+    height: 8vh;
+}
+
+.header.compacto .logo img {
+    width: 120px;
+    height: 46px;
+}
+
+.header.compacto .nav {
+    display: none;
+}
+
+.header.compacto .boton-menu {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* --- Menú desplegable cuando está compacto y abierto --- */
+.header.compacto.abierto .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 12px 20px;
+    gap: 20px;
+    background: #1e1b4b;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+
+
+
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(2, 6, 23, 0.78);
+    backdrop-filter: blur(5px);
+    z-index: 2000;
+}
+
+.modal-overlay.activo {
+    display: flex;
+}
+
+.grid-container {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    padding: 28px 24px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #1e1b4b 0%, #0f172a 100%);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    color: #f8fafc;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.ancho-total {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.medio-ancho {
+    grid-column: span 1;
+}
+
+.titulo {
+    font-size: 1.35rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.grid-container label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #93c5fd;
+}
+
+.grid-container input,
+.grid-container select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    background: #172038;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.grid-container input:focus,
+.grid-container select:focus {
+    outline: 2px solid #38bdf8;
+    outline-offset: 1px;
+}
+
+.grid-container button[type="submit"],
+.grid-container .btn-secundario {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.grid-container button[type="submit"] {
+    background: #991e28;
+    color: #ffffff;
+}
+
+.grid-container .btn-secundario {
+    background: rgba(47, 64, 160, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #2b4157;
+}
+
+.grid-container button:hover {
+    opacity: 0.92;
+}
+
+.btn-cerrar {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(15, 23, 42, 0.8);
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+#estado-login {
+    min-height: 18px;
+    font-size: 0.85rem;
+    text-align: center;
+    color: #38bdf8;
+}
+
+/* MEDIA*/
+/* --- Celulares y pantallas chicas --- */
+
+.solo-movil { display: none; }
+@media (max-width: 768px){
+.solo-movil { display: block; }
+}
+
+@media (max-width: 768px) {
+    .header {
+        overflow: hidden;
+    }
+
+    .header-top {
+        height: auto;
+        min-height: 64px;
+        padding: 10px 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 118px;
+        height: 44px;
+    }
+
+    /* Ocultar buscador y botones de acceso en pantalla chica */
+
+   .accesos #btn-abrir-modal,
+    .accesos .btn-abrir {
+        display: none;
+    }
+    .accesos #btn-abrir-carrito
+    {
+        display: none;
+    }
+
+    /* Mostrar botón de menú */
+    .boton-menu {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 8px 12px;
+        font-size: 0.82rem;
+    }
+
+    /* Menú desplegable oculto hasta tocar #botonMenu */
+    .nav {
+        display: none;
+        height: auto;
+        min-height: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 6px 14px 12px;
+        background: #1e1b4b;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .nav a {
+        padding: 11px 6px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        border-left: 3px solid transparent;
+        font-size: 0.92rem;
+    }
+
+    .nav a:last-child {
+        border-bottom: none;
+    }
+
+    .nav a:hover,
+    .nav a.activo {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+        border-left-color: #e60012;
+        padding-left: 10px;
+    }
+
+    .header.abierto .nav,
+    .header.compacto.abierto .nav {
+        display: flex;
+    }
+
+    /* Ajuste del espacio superior del main al ser una sola fila compacta */
+    main {
+        padding-top: 76px;
+    }
+
+    main section {
+        scroll-margin-top: 76px;
+    }
+
+    .grid-container {
+        padding: 22px 16px;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 420px) {
+    .logo img {
+        width: 98px;
+        height: 38px;
+    }
+
+    .medio-ancho {
+        grid-column: 1 / -1;
+    }
+}

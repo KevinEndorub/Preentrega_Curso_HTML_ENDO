@@ -1,0 +1,80 @@
+<header class="header">
+    <div class="header-top">
+        <a href="index.html" class="logo">
+            <img src="/assets/img/Hoyoverse.png" alt="Logo de Hoyoverso">
+        </a>
+        <!--   Esto por ahora no tiene funcionalidad  -->
+        <div class="buscador">
+            <span aria-hidden="true">⌕</span>
+            <input type="text" placeholder="Buscar productos...(No funciona por ahora)">
+        </div>
+
+        <div class="accesos">
+            <button type="button" id="btn-abrir-modal" class="btn-abrir">Iniciar Sesión</button>
+            <button type="button" class="btn-acceso btn-carrito" id="btn-carrito">Carrito</button>
+            <button type="button" class="boton-menu" id="botonMenu">
+                ☰ Menú
+            </button>
+        </div>
+    </div>
+
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+        <a href="/Placeholder.html">Mundos</a>
+        <a href="/Placeholder.html">Personajes</a>
+        <a href="/Placeholder.html">Productos</a>
+        <a href="/Placeholder.html">Colecciones</a>
+
+        <!-- Solo visibles en celular -->
+        <a href="#" class="solo-movil js-abrir-modal">Iniciar Sesión</a>
+        <a href="#" class="solo-movil js-abrir-carrito">Carrito</a>
+
+    </nav>
+</header>
+
+<!-- Modal fuera del header -->
+<div class="modal-overlay" id="modal-login" aria-hidden="true">
+    <form class="grid-container" id="form-login" action="https://formspree.io/f/xnpnvgbp" method="post">
+        <button type="button" id="btn-cerrar-modal" class="btn-cerrar" aria-label="Cerrar modal">X</button>
+
+        <div class="ancho-total titulo">
+            Inicio de Sesión
+        </div>
+
+        <div class="ancho-total">
+            <label for="email">Correo electrónico</label>
+            <input type="email" name="email" id="email" required placeholder="ElBarto@gmail.com">
+        </div>
+
+        <div class="ancho-total">
+            <label for="contraseña">Contraseña</label>
+            <input type="password" name="contraseña" id="contraseña" required placeholder="*******">
+        </div>
+
+        <div class="ancho-total">
+            <label for="servidores">Servidor</label>
+            <select id="servidores" name="servidor" required>
+                <option value="" disabled selected>Seleccione un servidor</option>
+                <option value="america">América</option>
+                <option value="asia">Asia</option>
+                <option value="china">China</option>
+                <option value="europa">Europa</option>
+            </select>
+        </div>
+
+        <div class="ancho-total">
+            <button type="submit" id="enviar">Ingresar</button>
+        </div>
+
+        <div class="ancho-total">
+            <p id="estado-login"></p>
+        </div>
+
+        <div class="medio-ancho">
+            <button type="button" class="btn-secundario" id="btn-gmail">Gmail</button>
+        </div>
+
+        <div class="medio-ancho">
+            <button type="button" class="btn-secundario" id="btn-registrarse">Registrarse</button>
+        </div>
+    </form>
+</div>
