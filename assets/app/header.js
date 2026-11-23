@@ -1,6 +1,6 @@
 /*   No vuelvo a intentar esto: horas intentado reutilizar el header 12       */
 
-fetch("../assets/componentes/header.html")
+fetch("header.html")
     .then(response => {
         if (!response.ok) {
             throw new Error("No se pudo cargar el header");
