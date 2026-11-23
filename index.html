@@ -1,125 +1,95 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Web</title>
-    <link rel="stylesheet" href="assets/styles/style.css">
-    <link rel="stylesheet" href="assets/styles/style-form.css">
-    <link rel="stylesheet" href="assets/styles/style-cartas.css">
-    
+    <link rel="stylesheet" href="assets/styles/layout.css">
+    <link rel="stylesheet" href="assets/styles/header-style.css">
+    <link rel="stylesheet" href="assets/styles/cartas-productos-style.css">
+    <link rel="stylesheet" href="assets/styles/carrito-style.css">
+    <link rel="stylesheet" href="assets/styles/cartas-style.css">
+
+    <title>Proyecto Final FrontEnd</title>
 </head>
 <body>
+    <div class="pagina">
+
+        <div id="header-container">
+
+        </div>
+
+        <main>
+
+        <div class="banner-entrada">
+        <img
+            src="./assets/img/wallpaper-crisos.png"
+            alt="Portada de entrada"
+            class="banner-entrada-img"
+        >
+        </div>
+
+            <h1>Honkai: Star rail</h1>
+            <!-- Productos -->
+            <section class="productos">
+                <h2>Productos</h2>
+
+            <section id="catalogo" aria-label="Catálogo de productos">
+                <div id="catalogo-grid" class="catalogo-grid"></div>
+            </section>
 
 
 
+            </section>
 
 
-    <div class="page-container">
-        
-        <!-- Checkbox de Modo Oscuro al inicio para que afecte a toda la pagina-->
-        <input type="checkbox" id="modo-nocturno">
 
-        <header class="header-fijo">
-            <!-- Checkbox y Label del Menú  -->
-            <input type="checkbox" id="menu-check">
-            <label for="menu-check" class="menu-desplegable">☰</label>
-            
-            <!-- Logo -->
-            <div class="logo"> 
-                <img src="assets/img/logo.png" alt="Logo" class="imagen-logo">
+        <section id="mundos" aria-label="Mundos de Honkai: Star Rail">
+            <h2>Mundos</h2>
+
+            <div class="mundos-track" role="region" aria-label="Carrusel lateral de mundos">
+                <article class="carta-mundo">
+                    <div class="carta-mundo-img-wrap">
+                        <img src="./assets/img/Amphoreus.png" alt="Amphoreus" class="carta-mundo-img" loading="lazy">
+                    </div>
+                    <div class="carta-mundo-cuerpo">
+                        <h3 class="carta-mundo-titulo">Amphoreus</h3>
+                        <p class="carta-mundo-desc">En este mundo, fundirán la sangre dorada en sus cuerpos. 
+                            ¿Recordará el destino sus nombres en el futuro? ... 
+                            Los recuerdos que despiertan al amanecer no olvidarán el nombre de Amphoreus.</p>
+                    </div>
+                </article>
+
+                <article class="carta-mundo">
+                    <div class="carta-mundo-img-wrap">
+                        <img src="./assets/img/JariloIV.png" alt="Jarilo IV" class="carta-mundo-img" loading="lazy">
+                    </div>
+                    <div class="carta-mundo-cuerpo">
+                        <h3 class="carta-mundo-titulo">Jarilo IV</h3>
+                        <p class="carta-mundo-desc">El último bastión de la humanidad contra el Hielo Eterno</p>
+                    </div>
+                </article>
+
+                <article class="carta-mundo">
+                    <div class="carta-mundo-img-wrap">
+                        <img src="./assets/img/Colonipenal.jpg" alt="Tercer mundo" class="carta-mundo-img" loading="lazy">
+                    </div>
+                    <div class="carta-mundo-cuerpo">
+                        <h3 class="carta-mundo-titulo">Colonipenal</h3>
+                        <p class="carta-mundo-desc">¿Por qué duerme la vida?</p>
+                    </div>
+                </article>
             </div>
-            
-            <!-- Menú de navegación -->
-            <nav>
-                <ul>
-                    <li><a href="placeholder.html">Inicio</a></li>
-                    <li><a href="placeholder.html">Mundos</a></li>
-                    <li><a href="placeholder.html">Merch</a></li>
-
-            <!-- Formulario de usuario -->   
-                    <li>
-                        <input type="checkbox" id="toggle-form">
-                        <label for="toggle-form" class="btn-abrir">Iniciar Sesión</label>
-
-                        <div class="modal-overlay">
-                            <form class="grid-container" action="https://formspree.io/f/xnpnvgbp" method="post" >
-
-                                <label for="toggle-form" class="btn-cerrar">X</label>
-                                <div class="ancho-total titulo">
-                                    Inicio de Sesión
-                                </div>
-
-                                <div class="ancho-total">
-                                    <label for="email">Correo electrónico</label>
-                                    <input type="email" name="email" id="email" required placeholder="ElBarto@gmail.com">
-                                </div>
-
-
-                                <div class="ancho-total">
-                                    <label for="contraseña">Contraseña</label>
-                                    <input type="password" name="contraseña"  id="contraseña" required placeholder="*******">
-                                </div>
-
-
-                                <div class="ancho-total">
-                                    <label for="servidores">Servidor</label>
-                                    <select id="servidores" name="servidor" required>
-                                        <option value="" disabled selected>Seleccione un servidor</option>
-                                        <option value="america">América</option>
-                                        <option value="asia">Asia</option>
-                                        <option value="china">China</option>
-                                        <option value="europa">Europa</option>
-                                    </select>
-                                </div>
-
-
-                                <div class="ancho-total">
-                                    <button type="submit" id="enviar">Ingresar</button>
-                                </div>
-
-                                <!-- Fila 6: Botones divididos en 2 columnas -->
-                                <div class="medio-ancho">
-                                    <button type="button" class="btn-secundario">Gmail</button>
-                                </div>
-
-                                <div class="medio-ancho">
-                                    <a class="btn-secundario" href="placeholder.html">Registrarse</a>
-
-                                </div>
-
-                            </form>
-                </div>
-                </li>
-                </ul>
-            </nav>
-        </header>
-        </main>
-    </div>
-
-
-<main>
-
-    <!-- Fondo banner  -->
-
-    <div class="fondo-inicio">
-        <img src="assets/img/wallpaper-crisos.png">
-    </div>
-
-
- <div class="espacio">
-    <h1>Amphoreus</h1>
-    <h2>Herederos de Crisos</h2>
-</div>
+        </section>
 
 
 
-    <!-- Cartas -->
-    
-<div class="seccion-cartas">
+            <section class="personajes">
+                <h2>Personajes</h2>
 
-    <div class="contenedor-carta">
+
+ <div class="contenedor-carta">
+        <!--  Por la cantidad de personajes deberia cambiar esto por un script y un json
+          no obstante, no tengo tiempo para eso  -->
         <!--  Imagen principal -->
         <div class="contenedor-imagen-personaje">
             <img src="assets/img/cyrene_card.png" alt="Cyrene" class="imagen-personaje">
@@ -146,12 +116,12 @@
                 <!-- Video Promo -->
                 <div class="caja-video">
                     <iframe class="video-promo"
-                        src="https://www.youtube.com/embed/CRAuK8T6Xis?si=SiS8y5JDZUHIDRR6" 
-                        title="YouTube video player" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen>
-                    </iframe>
+                        src="https://www.youtube.com/embed/CRAuK8T6Xis?si=6vDvrTY4_evHwBdL" 
+                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                        gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
+                    
                 </div>  
 
                 <!-- Frase  -->
@@ -196,52 +166,58 @@
 
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+            </section>
+
+        </main>
+
+        <div id="footer-container"></div>
+
     </div>
 
-    <!--- Aca va el espacio entre cartas -->
- <div class="espacio">
 
-</div>
-    
+ 
 
 
+    <!-- Inicializacion de Sripts-->
+    <script src="assets/app/header.js" defer></script>
+    <script src="assets/app/footer.js" defer></script>
+    <script src="assets/app/app.js" defer></script>
 
 
-</div>
-
-</main>
-
-<footer class="footer-sitio">
-    <div class="barray-copyright">
-        <div class="contenido-footer">
-
-                <div class="columna-footer">
-                    <h3 class="logo-footer"> Pagina de prueba </h3>
-                    <p class="descripcion-footer">
-                        Presentacion de personajes
-                    </p>
-                </div>
 
 
-                <div class="columna-footer">
-                    <h4>Comunidad</h4>
-                    <div class="redes-sociales">
-                        <a href="..\proyecto_final\placeholder.html" aria-label="Discord">Discord</a>
-                        <a href="..\proyecto_final\placeholder.html" aria-label="Twitter">Twitter</a>
-                        <a href="..\proyecto_final\placeholder.html" aria-label="YouTube">YouTube</a>
-                    </div>
-                </div>
-            </div>
+<!-- Carrito -->
 
-
-    <div class="barray-copyright">
-        <p class="disclaimer">
-            Esta web es un proyecto no oficial didactico. Todos los activos, imágenes y contenido del juego son propiedad intelectual de sus respectivos dueños.
-        </p>
+<aside class="carrito-panel" id="carrito-panel" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="carrito-header">
+        <h3>Tu Carrito</h3>
+        <button type="button" id="btn-cerrar-carrito" class="btn-cerrar-carrito" aria-label="Cerrar carrito">✕</button>
     </div>
 
-</footer>
+    <div class="carrito-items" id="carrito-items"></div>
+
+    <div class="carrito-footer">
+    <div class="carrito-total">
+        <span>Total:</span>
+        <strong id="carrito-total">$0</strong>
+    </div>
+    <button type="button" id="btn-comprar-carrito" class="btn-comprar-carrito">Comprar</button>
+    <button type="button" id="btn-vaciar-carrito" class="btn-vaciar-carrito">Vaciar carrito</button>
+    <p id="mensaje-compra" class="mensaje-compra" role="status" aria-live="polite"></p>
+</div>
+</aside>
+<script src="assets/app/carrito.js" defer></script>
 
 </body>
-</html>
 </html>
