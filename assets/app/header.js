@@ -1,44 +1,5 @@
 /*   No vuelvo a intentar esto: horas intentado reutilizar el header 12       */
 
-const enSubcarpeta = window.location.pathname.includes('/paginas/');
-const prefijo = enSubcarpeta ? '../' : './';
-
-async function cargarHeader() {
-    const contenedor = document.querySelector('#header-slot');
-    if (!contenedor) return;
-
-    const respuesta = await fetch(`${prefijo}assets/componentes/header.html`);
-    if (!respuesta.ok) {
-        console.error('Error al cargar header.html:', respuesta.status);
-        return;
-    }
-
-    contenedor.innerHTML = await respuesta.text();
-
-    // Ajusta el logo con data-src
-    contenedor.querySelectorAll('[data-src]').forEach((img) => {
-        img.src = `${prefijo}${img.dataset.src}`;
-    });
-
-    // Ajusta enlaces internos con data-ruta 
-    contenedor.querySelectorAll('[data-ruta]').forEach((enlace) => {
-        enlace.href = `${prefijo}${enlace.dataset.ruta}`;
-    });
-}
-
-document.addEventListener('DOMContentLoaded', cargarHeader);
-
-
-
-
-
-
-
-
-
-
-
-
 fetch("../assets/componentes/header.html")
     .then(response => {
         if (!response.ok) {
